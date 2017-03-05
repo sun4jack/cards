@@ -1,0 +1,54 @@
+body {
+  background: #000； //#aaa;
+}
+/* defines styles for each card */
+#game {
+  background: #9c9;
+  padding: 5px;
+}
+/* Define the 3D perspective view and dimension of each card. */
+.card {
+  -webkit-perspective: 600;
+  width: 168px;
+  height: 244px;
+}
+.face {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all .3s;
+  -webkit-backface-visibility: hidden;
+}
+.front {
+  background: #966;
+  z-index: 10;
+}
+.back {
+  background: #eaa;
+  -webkit-transform: rotate3d(0,1,0,-180deg);
+  z-index: 8;
+}
+.card-flipped .front {
+  -webkit-transform: rotate3d(0,1,0,180deg);
+  z-index: 8;
+}
+.card-flipped .back {
+  -webkit-transform: rotate3d(0,1,0,0deg);
+  z-index: 10;
+}
+/* set the card to corresponding playing card graphics */
+.cardAK {
+  background: url(../images/screenshot.png);
+}
+.cardAQ {
+  background: url(../images/screenshot.png);
+}
+/* rotate the applied DOM element 90 degree */
+.rotateRight {
+  -webkit-transform: rotate(270deg);//rotate3d(0,0,1,90deg);
+}
+/* move and scale up the applied DOM element */
+.moveAndScale {
+  -webkit-transform: translate3d(250px,250px,0) scale3d(1.5, 1.5,1);
+}

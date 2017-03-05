@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+  background: #a46740 ; //url(../images/bg.jpg);
+}
+#game {
+  border-radius: 10px;
+  border: 10px solid #666;
+  background: #232 ;//url(../images/table.jpg);
+  //width: 800;
+  height: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+#cards {
+  position: relative;
+  width: 800px;
+  height: 750px;
+}
+.card {
+-webkit-perspective: 600;
+width: 168px;
+height: 244px;
+position: absolute;
+-moz-transition: all .3s;
+-webkit-transition: all .3s;
+transition: all .3s;
+}
+.face {
+border-radius: 10px;
+width: 100%;
+height: 100%;
+position: absolute;
+-webkit-transition-property: opacity, transform, box-shadow;
+-webkit-transition-duration: .3s;
+-webkit-backface-visibility: hidden;
+}
+.front {
+background: #999 url(../images/screenshot.png) -334px -973px;
+z-index: 10;
+}
+.back {
+background: #efefef url(../images/screenshot.png);
+-webkit-transform: rotate3d(0,1,0,-180deg);
+z-index: 8;
+}
+.card:hover .face, .card-flipped .face {
+-webkit-box-shadow: 0 0 10px #aaa;
+}
+.card-flipped .front {
+-webkit-transform: rotate3d(0,1,0,180deg);
+z-index: 8;
+}
+.card-flipped .back {
+-webkit-transform: rotate3d(0,1,0,0deg);
+z-index: 10;
+}
+.card-removed {
+opacity: 0;
+}
+.cardAJ {background-position: -1674px 0px;}
+.cardAQ {background-position: -1842px 0px;}
+.cardAK {background-position: -2009px 0px;}
+
+.cardBJ {background-position: -1674px -244px;}
+.cardBQ {background-position: -1842px -244px;}
+.cardBK {background-position: -2009px -244px;}
+
+.cardCQ {background-position: -1674px -487px;}
+.cardCK {background-position: -1842px -487px;}
+.cardDQ {background-position: -1674px -730px;}
+.cardDK {background-position: -1842px -730px;}
